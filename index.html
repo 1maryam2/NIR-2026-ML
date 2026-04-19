@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система мониторинга БПЛА</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="scene-container"></div>
+    <div id="ui-panel">
+        <h2 class="alert-title">ВНИМАНИЕ: ОБЪЕКТ В ЗОНЕ</h2>
+        <div class="info-block">
+            <p><span>ID:</span> UNK-77X-BETA</p>
+            <p><span>Класс:</span> Квадрокоптер (Тяжелый)</p>
+            <p><span>Скорость:</span> 45 км/ч</p>
+            <p><span>Высота:</span> 1200 м</p>
+            <p><span>Грузоподъемность:</span> ~2.5 кг</p>
+            <p><span>Угроза:</span> <span class="danger">ВЫСОКАЯ</span></p>
+        </div>
+        <div class="controls">
+            <button class="btn btn-scan">Детальный скан</button>
+            <button class="btn btn-destroy">Перехват</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

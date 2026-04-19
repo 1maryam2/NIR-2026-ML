@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace; 
+    color: #00ff00;
+}
+
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#ui-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    background: rgba(0, 20, 0, 0.75);
+    border: 1px solid #00ff00;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.alert-title {
+    color: #ff3333;
+    font-size: 18px;
+    border-bottom: 1px solid #ff3333;
+    padding-bottom: 10px;
+    margin-top: 0;
+    animation: blink 2s infinite;
+}
+
+.info-block p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.info-block span {
+    opacity: 0.7;
+}
+
+.danger {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    background: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #00ff00;
+    color: #000;
+}
+
+.btn-destroy {
+    color: #ff3333;
+    border-color: #ff3333;
+}
+
+.btn-destroy:hover {
+    background: #ff3333;
+    color: #fff;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
